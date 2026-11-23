@@ -1,0 +1,181 @@
+/* Logo Styles */
+.logo-container {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+.logo-img {
+  height: 50px; /* Adjust as needed */
+  width: auto;
+  margin-right: 15px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-main {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #ff0000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.logo-sub {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+/* Navbar Base Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 10px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  padding-right: 20px;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #ff0000;
+}
+
+.nav-link.active {
+  color: #ff0000;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background: #ff0000;
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+/* Auth Buttons (Login + Admin side by side) */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;   /* space between buttons */
+  margin-left: 20px;
+}
+
+.login-btn {
+  display: flex;
+  align-items: center;
+  background: #ff0000;
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #cc0000;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+.admin-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background-color: #e80909;
+  transition: 0.3s;
+}
+
+.admin-btn:hover {
+  opacity: 0.8;
+}
+
+.admin-logo {
+  width: 22px;   /* logo size adjust */
+  height: 22px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .nav-link {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .logo-main {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .logo-text {
+    display: none;
+  }
+  
+  .logo-img {
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Will be replaced with mobile menu */
+  }
+  
+  .auth-buttons {
+    margin-right: 20px;
+  }
+  
+  /* Add mobile menu styles here */
+}

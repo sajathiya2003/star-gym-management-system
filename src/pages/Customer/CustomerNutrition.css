@@ -1,0 +1,263 @@
+.nutrition-plan-content {
+  padding: 30px;
+  max-width: 1200px;
+  margin-left: 150px;
+}
+
+.nutrition-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  border: 2px solid #dc2626;
+}
+
+.nutrition-section h2 {
+  color: #dc2626;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+/* Meals Timeline */
+.meals-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.meal-card {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #dc2626;
+  background: #fef2f2;
+  transition: transform 0.3s ease;
+}
+
+.meal-card:hover {
+  transform: translateX(5px);
+}
+
+.meal-card.completed {
+  background: #dc2626;
+  color: white;
+}
+
+.meal-card.completed .meal-time,
+.meal-card.completed .calories,
+.meal-card.completed .meal-items {
+  color: white;
+}
+
+.meal-time {
+  font-weight: bold;
+  color: #dc2626;
+  min-width: 80px;
+  font-size: 1.1rem;
+}
+
+.meal-card.completed .meal-time {
+  color: #fecaca;
+}
+
+.meal-content {
+  flex: 1;
+}
+
+.meal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.meal-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #1f2937;
+}
+
+.meal-card.completed .meal-header h3 {
+  color: white;
+}
+
+.calories {
+  color: #dc2626;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.meal-items {
+  color: #6b7280;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.meal-card.completed .meal-items {
+  color: #fecaca;
+}
+
+/* Goals Grid */
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.goal-card {
+  padding: 20px;
+  background: white;
+  border: 2px solid #dc2626;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.goal-card:hover {
+  transform: translateY(-5px);
+}
+
+.goal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.goal-header h3 {
+  color: #1f2937;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.goal-header span {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #f3f4f6;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #dc2626;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  color: #6b7280;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+/* Water Tracker */
+.water-tracker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  background: #fef2f2;
+  border-radius: 12px;
+}
+
+.water-goal {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.water-icon {
+  font-size: 3rem;
+}
+
+.water-info h3 {
+  color: #1f2937;
+  margin-bottom: 5px;
+}
+
+.water-info span {
+  color: #6b7280;
+}
+
+.water-glasses {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.glass {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #dc2626;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.glass.filled {
+  background: #dc2626;
+  color: white;
+}
+
+/* Buttons */
+.btn-red, .btn-white {
+  padding: 10px 20px;
+  border: 2px solid #dc2626;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-red {
+  background: #dc2626;
+  color: white;
+}
+
+.btn-white {
+  background: white;
+  color: #dc2626;
+}
+
+.btn-red:hover, .btn-white:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nutrition-plan-content {
+    padding: 20px;
+  }
+  
+  .meal-card {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .meal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .goals-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .water-glasses {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

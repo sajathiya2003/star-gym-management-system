@@ -1,0 +1,272 @@
+.progress-tracking-content {
+  padding: 30px;
+  max-width: 1200px;
+  margin-left: 150px;
+}
+
+.progress-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  border: 2px solid #dc2626;
+}
+
+.progress-section h2 {
+  color: #dc2626;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+/* Progress Stats Grid */
+.progress-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.progress-stat-card {
+  padding: 25px;
+  border-radius: 8px;
+  border: 2px solid #dc2626;
+  background: white;
+  transition: transform 0.3s ease;
+}
+
+.progress-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.15);
+}
+
+.stat-main h3 {
+  color: #6b7280;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+.current-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #dc2626;
+  margin-bottom: 10px;
+}
+
+.change {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.change.up {
+  color: #16a34a;
+}
+
+.change.down {
+  color: #dc2626;
+}
+
+.stat-target {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #e5e7eb;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.stat-target strong {
+  color: #1f2937;
+}
+
+/* Progress Chart */
+.progress-chart {
+  background: #fef2f2;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart-bars {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+  height: 200px;
+  gap: 20px;
+}
+
+.chart-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.chart-bar-label {
+  color: #6b7280;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.chart-bar-wrapper {
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  justify-content: center;
+}
+
+.chart-bar {
+  width: 30px;
+  background: #dc2626;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.3s ease;
+  min-height: 10px;
+}
+
+.chart-bar-value {
+  color: #1f2937;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Progress Table */
+.progress-table {
+  border: 2px solid #dc2626;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  background: #dc2626;
+  color: white;
+  padding: 15px 20px;
+  font-weight: bold;
+}
+
+.table-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  transition: background 0.3s ease;
+}
+
+.table-row:hover {
+  background: #fef2f2;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.status.completed {
+  background: #dc2626;
+  color: white;
+}
+
+.status.current {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #dc2626;
+}
+
+/* Achievements Grid */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.achievement-card {
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: scale(1.05);
+}
+
+.achievement-card.red {
+  background: #dc2626;
+  color: white;
+}
+
+.achievement-card.white {
+  background: white;
+  color: #1f2937;
+  border: 2px solid #dc2626;
+}
+
+.achievement-icon {
+  font-size: 2.5rem;
+}
+
+.achievement-info h3 {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.achievement-info p {
+  opacity: 0.9;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.achievement-card.white .achievement-info p {
+  color: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .progress-tracking-content {
+    padding: 20px;
+  }
+  
+  .progress-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-bars {
+    gap: 10px;
+  }
+  
+  .chart-bar {
+    width: 20px;
+  }
+  
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+}

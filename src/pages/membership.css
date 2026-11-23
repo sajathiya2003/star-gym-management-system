@@ -1,0 +1,376 @@
+/* IRON MEMBERSHIP - Bold Red/Black Theme */
+.iron-membership-container {
+  background-color: #000;
+  min-height: 100vh;
+  padding: 5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.membership-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #333;
+}
+
+.membership-header h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.membership-header h1 span {
+  color: #ff0000;
+}
+
+.subtitle {
+  color: #aaa;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.benefits-section {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.benefits-section h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.benefit-card {
+  background: #111;
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid #333;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  border-color: #ff0000;
+  transform: translateY(-5px);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.benefit-card h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.benefit-card p {
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.pricing-section {
+  text-align: center;
+}
+
+.pricing-section h2 {
+  color: #fff;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.plan-card {
+  background: #111;
+  border: 2px solid #333;
+  border-radius: 15px;
+  padding: 2rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.plan-card:hover {
+  border-color: #ff0000;
+  transform: translateY(-5px);
+}
+
+.plan-card.popular {
+  border-color: #ff0000;
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff0000;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.plan-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.plan-header h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.price {
+  color: #fff;
+}
+
+.amount {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #ff0000;
+}
+
+.period {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.plan-features {
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  color: #ddd;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.check-icon {
+  color: #ff0000;
+  font-weight: bold;
+  margin-right: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.select-btn {
+  width: 100%;
+  padding: 1.2rem;
+  background: #222;
+  color: #fff;
+  border: 2px solid #ff0000;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.select-btn:hover {
+  background: #ff0000;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.popular-btn {
+  background: #ff0000;
+  color: white;
+}
+
+.popular-btn:hover {
+  background: #cc0000;
+}
+
+/* Payment Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.payment-modal {
+  background: #111;
+  border-radius: 15px;
+  border: 2px solid #ff0000;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #333;
+}
+
+.modal-header h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.modal-content {
+  padding: 2rem;
+}
+
+.selected-plan {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: rgba(255, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.selected-plan h3 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.plan-price {
+  color: #ff0000;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #fff;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  padding: 1rem;
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #ff0000;
+}
+
+.pay-now-btn {
+  padding: 1.2rem;
+  background: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.pay-now-btn:hover {
+  background: #cc0000;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .iron-membership-container {
+    padding: 1rem;
+  }
+  
+  .membership-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .plan-card.popular {
+    transform: none;
+  }
+  
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .membership-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .pricing-section h2,
+  .benefits-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .amount {
+    font-size: 2rem;
+  }
+}

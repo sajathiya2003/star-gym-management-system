@@ -1,0 +1,537 @@
+/* IRON STRONG GYM - Dark Red Booking Form */
+.iron-gym-booking {
+  background: linear-gradient(135deg, #000000 0%, #1a0000 100%);
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Rajdhani', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.iron-gym-booking::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(255, 0, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(139, 0, 0, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.steel-plate-form {
+  background: #0a0a0a;
+  border-radius: 0;
+  width: 100%;
+  max-width: 800px;
+  padding: 3rem;
+  border: 3px solid #8b0000;
+  box-shadow: 
+    0 0 30px rgba(139, 0, 0, 0.5),
+    inset 0 0 20px rgba(139, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.steel-plate-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #8b0000, transparent);
+}
+
+.steel-plate-form::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #8b0000, transparent);
+}
+
+.header-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.header-section::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 25%;
+  right: 25%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #8b0000, transparent);
+}
+
+.header-section h1 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(139, 0, 0, 0.5);
+}
+
+.header-section h1 span {
+  color: #8b0000;
+  text-shadow: 0 0 10px rgba(139, 0, 0, 0.8);
+}
+
+.tagline {
+  color: #8b0000;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.progress-tracker {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.progress-tracker::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: linear-gradient(90deg, #8b0000, #333, #8b0000);
+  z-index: 1;
+}
+
+.step {
+  width: 35px;
+  height: 35px;
+  border-radius: 0;
+  background: #1a1a1a;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  color: #666;
+  font-weight: 900;
+  font-size: 1.1rem;
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+.step span {
+  transform: rotate(-45deg);
+}
+
+.step.active {
+  background: #8b0000;
+  border-color: #ff0000;
+  color: #000;
+  box-shadow: 0 0 15px rgba(139, 0, 0, 0.7);
+}
+
+.step.completed {
+  background: #1a1a1a;
+  border-color: #8b0000;
+  color: #8b0000;
+}
+
+.form-step {
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from { 
+    opacity: 0; 
+    transform: translateX(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateX(0); 
+  }
+}
+
+.form-step h2 {
+  color: #8b0000;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.5rem;
+}
+
+.step-icon {
+  color: #8b0000;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.8rem;
+  color: #8b0000;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 1.2rem;
+  background: #ffffff;
+  border: 2px solid #333;
+  border-radius: 0;
+  color: #f8f4f4;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #8b0000;
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(139, 0, 0, 0.5);
+}
+
+input::placeholder {
+  color: #292828;
+  text-transform: none;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+  text-transform: none;
+}
+
+.form-row {
+  display: flex;
+  gap: 2rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.option-cards,
+.goal-grid,
+.plan-cards {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.option-cards {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.goal-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.plan-cards {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.option-card,
+.goal-card,
+.plan-card {
+  position: relative;
+  cursor: pointer;
+}
+
+.option-card input,
+.goal-card input,
+.plan-card input {
+  position: absolute;
+  opacity: 0;
+}
+
+.option-card .card-content,
+.goal-card .card-content {
+  background: #fffdfd;
+  border: 2px solid #333;
+  border-radius: 0;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card .card-content {
+  background: #0e0d0d;
+  border: 3px solid #333;
+  border-radius: 0;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.option-card .card-content::before,
+.goal-card .card-content::before,
+.plan-card .card-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(139, 0, 0, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.option-card:hover .card-content::before,
+.goal-card:hover .card-content::before,
+.plan-card:hover .card-content::before {
+  left: 100%;
+}
+
+.option-card:hover .card-content,
+.goal-card:hover .card-content,
+.plan-card:hover .card-content {
+  border-color: #8b0000;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(139, 0, 0, 0.3);
+}
+
+.option-card.active .card-content,
+.goal-card.active .card-content,
+.plan-card.active .card-content {
+  background: #8b0000;
+  color: #ede6e6;
+  border-color: #ff0000;
+  transform: translateY(-5px);
+  box-shadow: 
+    0 5px 20px rgba(139, 0, 0, 0.5),
+    0 0 30px rgba(255, 0, 0, 0.3);
+  font-weight: 900;
+}
+
+.plan-card .card-content h3 {
+  color: inherit;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.plan-card .card-content .price {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  color: inherit;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.plan-card .card-content ul {
+  text-align: left;
+  padding-left: 1.5rem;
+  color: inherit;
+}
+
+.plan-card .card-content li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.plan-card .card-content li::before {
+  content: '►';
+  color: currentColor;
+  position: absolute;
+  left: -1.5rem;
+  font-size: 0.8rem;
+}
+
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid #333;
+}
+
+button {
+  padding: 1.2rem 2.5rem;
+  border: none;
+  border-radius: 0;
+  font-weight: 900;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+button:hover::before {
+  left: 100%;
+}
+
+.back-btn {
+  background: transparent;
+  color: #8b0000;
+  border: 2px solid #8b0000;
+}
+
+.back-btn:hover {
+  background: #8b0000;
+  color: #000;
+  box-shadow: 0 0 20px rgba(139, 0, 0, 0.5);
+}
+
+.next-btn, .submit-btn {
+  background: #8b0000;
+  color: #000;
+  border: 2px solid #8b0000;
+  font-weight: 900;
+}
+
+.next-btn:hover, .submit-btn:hover {
+  background: #ff0000;
+  border-color: #ff0000;
+  transform: translateY(-3px);
+  box-shadow: 
+    0 5px 20px rgba(255, 0, 0, 0.4),
+    0 0 30px rgba(255, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .steel-plate-form {
+    padding: 2rem;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .goal-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .option-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  button {
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .header-section h1 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .iron-gym-booking {
+    padding: 1rem;
+  }
+  
+  .steel-plate-form {
+    padding: 1.5rem;
+  }
+  
+  .goal-grid,
+  .option-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-section h1 {
+    font-size: 1.8rem;
+  }
+  
+  .progress-tracker {
+    gap: 1.5rem;
+  }
+  
+  .step {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+  
+  .form-step h2 {
+    font-size: 1.4rem;
+  }
+}
+
+/* Special effects for premium plan */
+.plan-card.premium .card-content {
+  border-color: #ff0000;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+}
+
+.plan-card.premium.active .card-content {
+  background: linear-gradient(135deg, #8b0000, #ff0000);
+  box-shadow: 
+    0 0 30px rgba(255, 0, 0, 0.6),
+    0 0 50px rgba(255, 0, 0, 0.3);
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(139, 0, 0, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(139, 0, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(139, 0, 0, 0); }
+}
+
+.loading {
+  animation: pulse 2s infinite;
+}

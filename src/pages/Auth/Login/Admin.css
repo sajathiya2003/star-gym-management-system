@@ -1,0 +1,488 @@
+.admin-trainer-login-container {
+  min-height: 100vh;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(255, 0, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 0, 0, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, #0a0a0a 0%, #1a0000 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-trainer-login-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(circle, transparent 20%, #0a0a0a 70%),
+    repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255, 0, 0, 0.03) 10px, rgba(255, 0, 0, 0.03) 20px);
+  animation: backgroundShift 20s infinite linear;
+}
+
+@keyframes backgroundShift {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.admin-trainer-login-card {
+  background: rgba(10, 10, 10, 0.85);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 50px 40px;
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+  backdrop-filter: blur(10px);
+  box-shadow: 
+    0 25px 50px rgba(255, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 0 0 1px rgba(255, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.admin-trainer-login-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ff0000, #ff4444, #ff0000);
+  animation: borderGlow 3s ease-in-out infinite;
+}
+
+.admin-trainer-login-card::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff0000, transparent, #ff0000);
+  border-radius: 22px;
+  z-index: -1;
+  opacity: 0.1;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes borderGlow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.at-logo {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.at-logo h1 {
+  color: #ffffff;
+  font-size: 3em;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 10px rgba(255, 0, 0, 0.3);
+  position: relative;
+  display: inline-block;
+}
+
+.at-logo h1 span {
+  color: #ff0000;
+  position: relative;
+}
+
+.at-logo h1 span::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff0000, transparent);
+  animation: textUnderline 2s ease-in-out infinite;
+}
+
+@keyframes textUnderline {
+  0%, 100% { opacity: 0.5; transform: scaleX(0.8); }
+  50% { opacity: 1; transform: scaleX(1); }
+}
+
+.at-logo p {
+  color: #ff4444;
+  margin: 10px 0 0 0;
+  font-size: 0.9em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/* Role Selection Styles */
+.at-role-selection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.at-role-option {
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.8), rgba(38, 0, 0, 0.8));
+  border: 2px solid rgba(51, 51, 51, 0.5);
+  border-radius: 15px;
+  padding: 20px 15px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.at-role-option::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.1), transparent);
+  transition: left 0.6s;
+}
+
+.at-role-option:hover::before {
+  left: 100%;
+}
+
+.at-role-option.at-active {
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(204, 0, 0, 0.05));
+  border: 2px solid #ff0000;
+  transform: translateY(-5px);
+  box-shadow: 
+    0 10px 25px rgba(255, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.at-role-option i {
+  font-size: 2em;
+  margin-bottom: 12px;
+  display: block;
+  transition: all 0.3s ease;
+  color: #666;
+}
+
+.at-role-option.at-active i {
+  color: #ff0000;
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+.at-role-option h3 {
+  margin: 0;
+  font-size: 0.85em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #888;
+  transition: all 0.3s ease;
+}
+
+.at-role-option.at-active h3 {
+  color: #ff0000;
+}
+
+/* Form Styles */
+.at-login-form {
+  margin-bottom: 30px;
+}
+
+.at-form-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.at-form-group label {
+  display: block;
+  color: #ff0000;
+  margin-bottom: 10px;
+  font-size: 0.85em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+}
+
+.at-form-group label i {
+  margin-right: 10px;
+  width: 16px;
+  transition: all 0.3s ease;
+}
+
+.at-form-group:focus-within label {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.at-form-group:focus-within label i {
+  transform: scale(1.2);
+  color: #ff0000;
+}
+
+.at-form-group input {
+  width: 100%;
+  padding: 16px 20px;
+  background: rgba(26, 26, 26, 0.8);
+  border: 2px solid rgba(51, 51, 51, 0.5);
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 1em;
+  transition: all 0.4s ease;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.at-form-group input:focus {
+  outline: none;
+  border-color: #ff0000;
+  background: rgba(38, 0, 0, 0.8);
+  box-shadow: 
+    0 0 20px rgba(255, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+.at-form-group input::placeholder {
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.at-form-group input:focus::placeholder {
+  color: #777;
+}
+
+/* Login Button */
+.at-login-button {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, #ff0000, #cc0000);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.at-login-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s;
+}
+
+.at-login-button:hover::before {
+  left: 100%;
+}
+
+.at-login-button:hover {
+  background: linear-gradient(135deg, #cc0000, #ff0000);
+  transform: translateY(-3px);
+  box-shadow: 
+    0 15px 30px rgba(255, 0, 0, 0.4),
+    0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+.at-login-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+}
+
+/* Links */
+.at-links {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.at-links a {
+  color: #ff4444;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+}
+
+.at-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ff0000;
+  transition: width 0.3s ease;
+}
+
+.at-links a:hover {
+  color: #ffffff;
+}
+
+.at-links a:hover::after {
+  width: 100%;
+}
+
+/* Divider */
+.at-divider {
+  height: 1px;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 0, 0, 0.3), 
+    rgba(255, 0, 0, 0.6), 
+    rgba(255, 0, 0, 0.3), 
+    transparent
+  );
+  margin: 30px 0;
+  position: relative;
+}
+
+.at-divider::before {
+  content: '⚡';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #0a0a0a;
+  padding: 0 15px;
+  color: #ff0000;
+  font-size: 0.8em;
+}
+
+/* Role Description */
+.at-role-description {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(255, 0, 0, 0.05), rgba(204, 0, 0, 0.02));
+  border-radius: 12px;
+  border-left: 4px solid #ff0000;
+  position: relative;
+  overflow: hidden;
+}
+
+.at-role-description::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #ff0000, transparent);
+  animation: slideDown 2s ease-in-out infinite;
+}
+
+@keyframes slideDown {
+  0%, 100% { transform: translateY(-100%); }
+  50% { transform: translateY(100%); }
+}
+
+.at-role-description.at-active {
+  display: block;
+  animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.at-role-description h3 {
+  color: #ff0000;
+  margin: 0 0 10px 0;
+  font-size: 1.1em;
+  font-weight: 700;
+  text-shadow: 0 2px 5px rgba(255, 0, 0, 0.2);
+}
+
+.at-role-description p {
+  color: #cccccc;
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .admin-trainer-login-card {
+    padding: 40px 25px;
+    margin: 20px;
+  }
+  
+  .at-logo h1 {
+    font-size: 2.5em;
+  }
+  
+  .at-role-selection {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .at-links {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
+
+/* Loading animation for form submission */
+.at-login-button.loading {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.at-login-button.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid transparent;
+  border-top: 2px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,19 @@
+export { default as Home } from './Home';
+export { default as About } from './About';
+export { default as Gallery } from './Gallery';
+export { default as Review } from './Review';
+export { default as Booking } from './Booking';
+export { default as Workouts } from './Workouts';
+export { default as Contact } from './Contact';
+export { default as Trainers } from './Trainers';
+export { default as membership } from './membership';
+export { default as RegistrationForm } from './Auth/RegistrationForm/RegistrationForm'; // Updated path
+export { default as Login } from './Auth/Login/Login';
+export { default as Login } from './Auth/Login/Adminlogin';
+export { default as Dashboard } from './Auth/Admin/Dashboard';
+export { default as Payments } from './pages/Admin/Payments';
+export { default as Classes } from './pages/Admin/Classes';
+export { default as Reports } from './pages/Admin/Reports';
+export { default as Profile } from './pages/Admin/Profile';
+export { default as Admin } from './Auth/Login/Admin';
+export { default as TrainerSidebar } from './components/TrainerSidebar';
